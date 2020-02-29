@@ -1,0 +1,13 @@
+<%# The header for the page to infom them of what they are viewing %>
+<h1> Please confirm the information</h1>
+<%# The title of the article %>
+<h2>Article Title: <%= @article.title %> </h2>
+<%# The content of the article %>
+<h3>Article Content: <%= @article.content %> </h3>
+<%# <form method="get" action="/articles">
+  <button type="submit" value="Submit">Confirm</button>
+</form> %>
+<form method="POST" action="/articles/<%= @article.id %>">
+<input type="hidden" value="delete" name="_method">
+<button type="submit" value="Submit">Delete</button>
+</form>
