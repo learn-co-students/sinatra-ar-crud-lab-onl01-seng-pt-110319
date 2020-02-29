@@ -1,0 +1,7 @@
+<h1>INDEX</h1>
+<ul>
+<% @articles.each do |a|%>
+<li><strong><%= a.id %>. <span style="text-decoration: underline;"><%=a.title%></span></strong><br>
+<em><%= a.content %></em></li><br>
+<% end %>
+<%# here we see articles iterated over for title and content %>
