@@ -10,4 +10,19 @@ class ApplicationController < Sinatra::Base
 
   get '/' do
   end
+
+  get 'articles/new' do
+    erb :new
+  end
+
+  post '/articles' do
+    binding.pry
+    @article1 = Article.create(params)
+    redirect ('/results')
+  end
+
+  get '/results' do
+    erb :show
+  end
+
 end
