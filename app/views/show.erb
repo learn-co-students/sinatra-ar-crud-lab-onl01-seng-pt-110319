@@ -4,6 +4,8 @@
 <h4>Content: <%=@article.content%></h4>
 <hr>
 
+<button type="submit" formaction="/articles/<%=@article.id%>/edit">Edit Article</button>
+<br><br>
 <form action="/articles/<%=@article.id%>" method="post">
   <input type="hidden" name="_method" value="delete">
   <input type="submit" value="Delete Post">

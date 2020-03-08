@@ -9,7 +9,7 @@ class ApplicationController < Sinatra::Base
   end
 
   get '/' do
-
+    erb :welcome
   end
 
   get '/articles' do
@@ -41,6 +41,8 @@ class ApplicationController < Sinatra::Base
   patch '/articles/:id' do
     @article = Article.find_by_id(params[:id])
     @article.update(title: params[:title], content: params[:content])
+    #taking the value from the params hash and assigning it to the value of the title key of the hash you are passing into the update method
+    #binding.pry
     redirect to "/articles/#{@article.id}"
   end
 
