@@ -1,0 +1,9 @@
+<h1>Magazine Articles</h1>
+<hr>
+<h3>Article List</h3>
+<%@articles.each.with_index(1) do |a, i|%>
+  <%=a.title%>
+  <%=a.content%>
+  <br>
+  <br>
+<%end%>
