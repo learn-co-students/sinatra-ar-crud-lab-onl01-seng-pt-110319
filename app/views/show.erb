@@ -3,3 +3,8 @@
 <h4>Title: <%=@article.title%></h4>
 <h4>Content: <%=@article.content%></h4>
 <hr>
+
+<form action="/articles/<%=@article.id%>" method="post">
+  <input type="hidden" name="_method" value="delete">
+  <input type="submit" value="Delete Post">
+</form>
